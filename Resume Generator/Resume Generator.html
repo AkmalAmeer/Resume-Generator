@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Resume Generator</title>
+    <link rel="stylesheet" href="Resume Generator.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Generate Your Resume</h1>
+        <form id="resumeForm">
+            <div class="form-section">
+                <h2>Personal Information</h2>
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="text" id="contact" placeholder="Contact Number" required>
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="form-section">
+                <h2>Professional Summary</h2>
+                <textarea id="summary" placeholder="Write a brief summary about yourself..." required></textarea>
+            </div>
+            <div class="form-section">
+                <h2>Experience</h2>
+                <textarea id="experience" placeholder="List your experience..." required></textarea>
+            </div>
+            <div class="form-section">
+                <h2>Education</h2>
+                <textarea id="education" placeholder="List your education..." required></textarea>
+            </div>
+            <div class="form-section">
+                <h2>Skills</h2>
+                <textarea id="skills" placeholder="List your skills..." required></textarea>
+            </div>
+            <button type="button" class="btn" onclick="generatePreview()">Generate Preview</button>
+        </form>
+        <div id="previewContainer">
+            <h2>Resume Preview</h2>
+            <div id="resumePreview"></div>
+            <button id="downloadBtn" class="btn" onclick="downloadPDF()">Download as PDF</button>
+        </div>
+    </div>
+    <script src="Resume Generator.js"></script>
+</body>
+
+</html>
